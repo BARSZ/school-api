@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @AllArgsConstructor
 public class SchoolApiController {
@@ -33,7 +33,7 @@ public class SchoolApiController {
 //    public School createSchool(School school) {
 //        return schoolService.create(school);
 //    }
-
+//testing git
     @RequestMapping(method = RequestMethod.PUT, value = "/api/schools/{id}")
     public School updateSchool(@PathVariable("id") long id, @RequestBody School school) {
         return schoolService.updateSchool(id, school);
